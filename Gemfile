@@ -55,3 +55,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
+# Gems para formulários
+gem "simple_form"
