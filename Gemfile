@@ -63,3 +63,6 @@ gem "simple_form"
 # Gems para formatação ERB
 gem "rufo"
 gem "htmlbeautifier"
+
+# Gems para autenticação
+gem "devise"
