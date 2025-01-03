@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_03_165331) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_03_165514) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,30 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_03_165331) do
     t.index ["user_id"], name: "index_establishments_on_user_id"
   end
 
+  create_table "products", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.string "name"
+    t.text "description"
+    t.decimal "price"
+    t.boolean "promotion_active"
+    t.decimal "promotion_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.bigint "establishment_id", null: false
+    t.string "title"
+    t.text "description"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["establishment_id"], name: "index_promotions_on_establishment_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -49,4 +73,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_03_165331) do
 
   add_foreign_key "categories", "establishments"
   add_foreign_key "establishments", "users"
+  add_foreign_key "products", "categories"
+  add_foreign_key "promotions", "establishments"
 end
