@@ -1,0 +1,11 @@
+<% content_for :title, "New promotion product" %>
+
+<h1>New promotion product</h1>
+
+<%= render "form", promotion_product: @promotion_product %>
+
+<br>
+
+<div>
+  <%= link_to "Back to promotion products", promotion_products_path %>
+</div>
