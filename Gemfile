@@ -59,3 +59,7 @@ end
 
 # Gems para formulários
 gem "simple_form"
+
+# Gems para formatação ERB
+gem "rufo"
+gem "htmlbeautifier"
