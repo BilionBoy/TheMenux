@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@estabelecimento) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :nome %>
+    <%= f.input :tipo %>
+    <%= f.input :tema %>
+    <%= f.input :redes_sociais %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
