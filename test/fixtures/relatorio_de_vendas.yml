@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estabelecimento: one
+  data: 2025-01-03
+  dados: 
+
+two:
+  estabelecimento: two
+  data: 2025-01-03
+  dados: 

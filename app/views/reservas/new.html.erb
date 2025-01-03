@@ -1,0 +1,11 @@
+<% content_for :title, "New reserva" %>
+
+<h1>New reserva</h1>
+
+<%= render "form", reserva: @reserva %>
+
+<br>
+
+<div>
+  <%= link_to "Back to reservas", reservas_path %>
+</div>

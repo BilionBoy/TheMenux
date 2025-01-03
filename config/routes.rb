@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :relatorio_de_vendas
+  resources :reservas
+  resources :avaliacaos
+  resources :pedidos
+  resources :promocaos
+  resources :produtos
+  resources :categoria
   resources :estabelecimentos
   devise_for :users
   root "home#index"

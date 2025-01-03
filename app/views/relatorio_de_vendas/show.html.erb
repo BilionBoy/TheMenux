@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @relatorio_de_venda %>
+
+<div>
+  <%= link_to "Edit this relatorio de venda", edit_relatorio_de_venda_path(@relatorio_de_venda) %> |
+  <%= link_to "Back to relatorio de vendas", relatorio_de_vendas_path %>
+
+  <%= button_to "Destroy this relatorio de venda", @relatorio_de_venda, method: :delete %>
+</div>

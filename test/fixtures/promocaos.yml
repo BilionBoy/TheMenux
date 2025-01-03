@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estabelecimento: one
+  titulo: MyString
+  descricao: MyText
+  data_inicio: 2025-01-03 13:30:46
+  data_fim: 2025-01-03 13:30:46
+  ativo: false
+
+two:
+  estabelecimento: two
+  titulo: MyString
+  descricao: MyText
+  data_inicio: 2025-01-03 13:30:46
+  data_fim: 2025-01-03 13:30:46
+  ativo: false

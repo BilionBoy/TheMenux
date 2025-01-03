@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @promocao %>
+
+<div>
+  <%= link_to "Edit this promocao", edit_promocao_path(@promocao) %> |
+  <%= link_to "Back to promocaos", promocaos_path %>
+
+  <%= button_to "Destroy this promocao", @promocao, method: :delete %>
+</div>

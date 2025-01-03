@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estabelecimento: one
+  cliente: one
+  total_preco: 9.99
+  status: MyString
+  metodo_entrega: MyString
+  endereco_entrega: MyString
+
+two:
+  estabelecimento: two
+  cliente: two
+  total_preco: 9.99
+  status: MyString
+  metodo_entrega: MyString
+  endereco_entrega: MyString
