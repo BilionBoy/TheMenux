@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_03_170322) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_03_170353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -80,6 +80,19 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_03_170322) do
     t.index ["establishment_id"], name: "index_promotions_on_establishment_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "establishment_id", null: false
+    t.string "customer_name"
+    t.string "customer_phone"
+    t.date "date"
+    t.time "time"
+    t.integer "people_count"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["establishment_id"], name: "index_reservations_on_establishment_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.integer "rating"
@@ -110,5 +123,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_03_170322) do
   add_foreign_key "promotion_products", "products"
   add_foreign_key "promotion_products", "promotions"
   add_foreign_key "promotions", "establishments"
+  add_foreign_key "reservations", "establishments"
   add_foreign_key "reviews", "products"
 end

@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@reservation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :establishment %>
+    <%= f.input :customer_name %>
+    <%= f.input :customer_phone %>
+    <%= f.input :date %>
+    <%= f.input :time %>
+    <%= f.input :people_count %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
